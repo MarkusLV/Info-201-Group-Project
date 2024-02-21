@@ -1,4 +1,4 @@
-# Title of Your Final Project Here 
+Correlation between Social Media and Mental Health 
 ## INFO 201 "Foundational Skills for Data Science"
 
 Authors: Jacob Martin, Markus Kalsons, Hannah Merrit
