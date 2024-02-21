@@ -1,7 +1,7 @@
 Correlation between Social Media and Mental Health 
 ## INFO 201 "Foundational Skills for Data Science"
 
-Authors: Jacob Martin, Markus Kalsons, Hannah Merrit
+Authors: Jacob Martin, Markus Kalsons, Hannah Merritt
 
 
 For the Final Project -- Data Wrangling, add the following to this code repository:
