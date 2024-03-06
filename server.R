@@ -2,7 +2,7 @@ library(ggplot2)
 library(plotly)
 library(dplyr)
 
-mh_sm_df <- read.csv("C:/Users/jmsoc/OneDrive/UW Sophmore/Winter Semester/INFO 201/Final Project/M work/Cleaned CSV Dataset")
+mh_sm_df <- read.csv("Cleaned CSV Dataset")
 
 server <- function(input, output){
   

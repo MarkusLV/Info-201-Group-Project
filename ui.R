@@ -2,7 +2,7 @@ library(plotly)
 library(ggplot2)
 library("jpeg")
 
-mh_sm_df <- read.csv("C:/Users/jmsoc/OneDrive/UW Sophmore/Winter Semester/INFO 201/Final Project/M work/Cleaned CSV Dataset")
+mh_sm_df <- read.csv("Cleaned CSV Dataset")
 ## OVERVIEW TAB INFO
 
 overview_tab <- tabPanel("Overview",
@@ -47,7 +47,9 @@ viz_1_sidebar <- sidebarPanel(
   checkboxInput(
     inputId = "color_country_mh",
     label = "Would you like color?"
-  )
+  ),
+  h4("Analysis:"),
+  h5("The purpose of this graph depicts the average percentile of a person to have a mental illness in each selected country. With this information we can compare the countries that contain the largest and smallest percentile of mental illness.")
 )
 
 viz_1_main_panel <- mainPanel(
@@ -77,7 +79,9 @@ viz_2_sidebar <- sidebarPanel(
   checkboxInput(
     inputId = "color_country_sm",
     label = "Would you like color?"
-  )
+  ),
+  h4("Analysis:"),
+  h5("The purpose of this graph depicts the average amount of screen time a certain person spends in a day for each country. With this information we can compare the countries that have the smallest and largest average screen time minutes.")
 )
 
 viz_2_main_panel <- mainPanel(
@@ -103,7 +107,8 @@ viz_3_sidebar <- sidebarPanel(
     choices = mh_sm_df$Entity,
     selected = NULL,
     multiple = TRUE
-  )
+  ),h4("Analysis:"),
+  h5("The purpose of this graph analyzes the average amount of screen time and the percent of people with mental illness for each country. With this information we can look to find any trends in the graph that can support a correlation between the amount of screen time with percentage of people with mental illness.")
 )
 
 viz_3_main_panel <- mainPanel(
@@ -111,11 +116,13 @@ viz_3_main_panel <- mainPanel(
   plotlyOutput(outputId = "combined_plot")
 )
 
+
 viz_3_tab <- tabPanel("Screen Time and Mental Health Graph",
                       sidebarLayout(
                         viz_3_sidebar,
                         viz_3_main_panel
                       )
+                      
 )
 
 ## CONCLUSIONS TAB INFO
@@ -144,5 +151,5 @@ ui <- navbarPage("Screen Time and Mental Health",
                  viz_1_tab,
                  viz_2_tab,
                  viz_3_tab,
-                 conclusion_tab
+                 conclusion_tab,
 )
